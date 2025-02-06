@@ -1,8 +1,8 @@
 services:
   app:
     build:
-      context: ./src
-      dockerfile: .infra/app/Dockerfile
+      context: .
+      dockerfile: ./infra/app/Dockerfile
     ports:
       - "3000:3000"
     depends_on:

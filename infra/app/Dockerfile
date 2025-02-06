@@ -2,7 +2,8 @@ FROM ruby:3.3
 
 WORKDIR /app
 
-COPY ./infra/app/Gemfile ./infra/app/Gemfile.lock ./
+# srcディレクトリからGemfileとGemfile.lockをコピー
+COPY ./src/Gemfile ./src/Gemfile.lock ./
 RUN bundle install
 
 COPY . .

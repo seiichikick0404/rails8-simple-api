@@ -14,3 +14,10 @@
     email: Faker::Internet.email,
   )
 end
+
+10.times do
+  Task.create!(
+    title: Faker::Lorem.sentence,
+    completed: false,
+  )
+end

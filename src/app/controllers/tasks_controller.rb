@@ -4,8 +4,8 @@ class TasksController < ApplicationController
         render json: @tasks
     end
 
-    def show
-        @task = Task.find(params[:id])
-        render json: @task
+    def incomplete
+        @tasks = Task.where(completed: false)
+        render json: @tasks
     end
 end

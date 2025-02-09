@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   resources :users
 
+  resources :tasks, only: [:index, :show]
+
   # Defines the root path route ("/")
   # root "posts#index"
 end

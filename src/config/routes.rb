@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   resources :tasks, only: [:index, :create]
   get 'tasks/incomplete', to: 'tasks#incomplete'
+
+  post 'login', to: 'authentication#login'
   # Defines the root path route ("/")
   # root "posts#index"
 end

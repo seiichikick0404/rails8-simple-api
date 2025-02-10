@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :tasks, only: [:index]
+  resources :tasks, only: [:index, :create]
   get 'tasks/incomplete', to: 'tasks#incomplete'
   # Defines the root path route ("/")
   # root "posts#index"
